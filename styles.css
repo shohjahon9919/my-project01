@@ -1,0 +1,127 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+    margin: 0;
+}
+
+.container {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 600px;
+    width: 90%;
+}
+
+h1 {
+    color: #2c3e50;
+    margin-bottom: 30px;
+}
+
+#question {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+button {
+    background-color: #087bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 10px;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #085683;
+}
+
+.answer {
+    display: block;
+    margin: 10px auto;
+    padding: 12px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    background: white;
+    border-radius: 5px;
+    width: 80%;
+    text-align: center;
+    transition: all 0.3s;
+}
+
+.answer:hover {
+    background-color: #f0f0f0;
+}
+
+.answer.correct {
+    background-color: #28a745;
+    color: white;
+    border-color: #28a745;
+}
+
+.answer.wrong {
+    background-color: #dc3545;
+    color: white;
+    border-color: #dc3545;
+}
+
+#result {
+    font-size: 1.2em;
+    margin: 20px 0;
+}
+
+#next {
+    margin-top: 20px;
+}
+/* Анимации */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+#quiz-container, #result-container {
+    animation: fadeIn 0.5s ease-out;
+}
+
+.answer {
+    animation: fadeIn 0.3s ease-out;
+    animation-fill-mode: both;
+}
+
+.answer:nth-child(1) { animation-delay: 0.1s; }
+.answer:nth-child(2) { animation-delay: 0.2s; }
+.answer:nth-child(3) { animation-delay: 0.3s; }
+.answer:nth-child(4) { animation-delay: 0.4s; }
+.answer {
+    display: block;
+    margin: 10px auto;
+    padding: 12px;
+    border: none;
+    cursor: pointer;
+    background: #087bff; /* Синий фон */
+    color: white; /* Белый текст */
+    border-radius: 8px;
+    width: 80%;
+    text-align: center;
+    font-weight: bold;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.answer:hover {
+    background-color: #085683; /* Темнее при наведении */
+    transform: scale(1.05); /* Легкое увеличение при наведении */
+}
+
+.answer:active {
+    background-color: #064a6d; /* Еще темнее при нажатии */
+    transform: scale(0.98); /* Незначительное уменьшение при нажатии */
+}
