@@ -1,12 +1,25 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 <head>
-    <title>Мой сайт</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Викторина по JavaScript</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Привет, мир!</h1>
+    <div class="container">
+        <h1>Викторина по JavaScript</h1>
+        <div id="quiz-container">
+            <p id="question">Здесь будет вопрос</p>
+            <div id="answers"></div>
+            <button id="next" style="display: none;">Следующий вопрос</button>
+        </div>
+        <div id="result-container" style="display: none;">
+            <h2>Результат</h2>
+            <p id="result"></p>
+            <button id="restart">Начать заново</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
-<head>
-    <link rel="stylesheet" href="style.css">
-</head>
